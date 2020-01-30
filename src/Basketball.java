@@ -9,16 +9,17 @@ public class Basketball extends Sport
         super(name,equipment);
     }
 
-    public String shoot()
+    public void shoot()
     {
         if (Math.random() >= 0.5)
-            return "Kobe!";
+            System.out.println("Kobe!");
         else
-            return "Airball!";
+            System.out.println("Airball!");
     }
 
     @Override
     public String play() {
         return "Bounce Bounce Bounce.";
     }
+
 }
