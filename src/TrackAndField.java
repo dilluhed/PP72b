@@ -1,8 +1,14 @@
 public class TrackAndField extends Sport
 {
-    public TrackAndField(String name, String equipment)
+    private String event;
+    private boolean isRelay;
+    private int runnersCheckedIn;
+    public TrackAndField(String name, String equipment, int numOfTeams, String event, boolean isRelay, int runnersCheckedIn)
     {
-        super(name,equipment);
+        super(name,equipment,numOfTeams);
+        this.event = event;
+        this.isRelay = isRelay;
+        this.runnersCheckedIn = runnersCheckedIn;
     }
 
     public void onYourMarks()
@@ -18,4 +24,13 @@ public class TrackAndField extends Sport
         return "*Bang* Thud. Thud. Thud.";
     }
 
+    public String toString()
+    {
+        String output = "";
+        output+=super.toString();
+        output+="\nEvent: " + event;
+        output+="\nRelay: " + isRelay;
+        output+="\nRunners Lined Up: " + runnersCheckedIn;
+        return output;
+    }
 }

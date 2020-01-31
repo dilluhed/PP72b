@@ -2,11 +2,13 @@ import java.util.Random;
 
 public class Basketball extends Sport
 {
-    private String name;
-    private String equipment;
-    public Basketball(String name, String equipment)
+    private int quarterTime;
+    private boolean isHalfCourt;
+    public Basketball(String name, String equipment, int numOfTeams, int quarterTime, boolean isHalfCourt)
     {
-        super(name,equipment);
+        super(name,equipment, numOfTeams);
+        this.quarterTime = quarterTime;
+        this.isHalfCourt = isHalfCourt;
     }
 
     public void shoot()
@@ -22,4 +24,12 @@ public class Basketball extends Sport
         return "Bounce Bounce Bounce.";
     }
 
+    public String toString()
+    {
+        String output = "";
+        output+=super.toString();
+        output+="\nTime Per Quarter: " + quarterTime + " min.";
+        output+="\nHalf Court: " + isHalfCourt;
+        return output;
+    }
 }

@@ -1,8 +1,8 @@
 public class main {
     public static void main(String[] args)
     {
-        Basketball stephcurr = new Basketball("Basketball", "Basketball");
-        TrackAndField mofarah = new TrackAndField("800m", "track spikes");
+        Basketball stephcurr = new Basketball("Basketball", "Basketball", 2, 5, false);
+        TrackAndField mofarah = new TrackAndField("Track", "track spikes", 8, "1600m", false, 16);
 
         System.out.println(stephcurr.toString());
         stephcurr.shoot();

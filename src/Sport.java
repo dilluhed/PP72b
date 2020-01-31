@@ -2,11 +2,13 @@ abstract public class Sport
 {
     protected String name;
     protected String equipment;
+    protected int numOfTeams;
 
-    public Sport(String name, String equipment)
+    public Sport(String name, String equipment, int numOfTeams)
     {
         this.name = name;
         this.equipment = equipment;
+        this.numOfTeams = numOfTeams;
     }
 
     abstract public String play();
@@ -23,6 +25,10 @@ abstract public class Sport
 
     public String toString()
     {
-        return "To play " + name + " I use " + equipment + ".";
+        String output = "";
+        output+= "Name: " + name;
+        output+= "\nEquipment: " + equipment;
+
+        return output;
     }
 }
